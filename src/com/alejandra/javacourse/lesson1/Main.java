@@ -146,6 +146,7 @@ public class Main {
         // Return range
         int [] myIntArray= {1, 0, 2, 3, -1, 2};
         System.out.println(findRange(myIntArray));
+
     }
 
 
@@ -171,7 +172,9 @@ public class Main {
 }
 
 class A {
+    // MOST OPTIMIZED SEARCH
     static boolean exists(int[] ints, int k) {
+        if(ints.length == 0) return  false; //check if array is empty
         int result = Arrays.binarySearch(ints, k);
         return result > 0 ? true : false;
     }
